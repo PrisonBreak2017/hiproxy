@@ -10,6 +10,7 @@
   "scripts": {
     "doc": "jsdoc2md src/*.js src/listeners/*.js src/listeners/request/*.js",
     "pretest": "node scripts/pretest.js",
+    "start": "node bin/cli.js start -p 8080 --debug",
     "test": "export NPM_TEST=true && nyc mocha test/**/*.test.js --timeout 5000",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "report": "npm test && nyc report --reporter=lcov --reporter=html",
